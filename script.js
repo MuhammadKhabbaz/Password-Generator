@@ -8,9 +8,8 @@ var generateBtn = document.querySelector("#generate");
 //assembling password properties
 function generatePassword() {
   //confirm length
-  
+  let numChars = Number(window.prompt("how manycharacters do you want your password to be 8-128")); 
   while(true){
-    let numChars = Number(window.prompt("how manycharacters do you want your password to be 8-128")); 
     if(numChars < 8 || numChars > 128){
       numChars = Number(window.prompt("Invalid Option, try again. How manycharacters do you want your password to be 8-128")); 
       continue;
