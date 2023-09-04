@@ -1,17 +1,17 @@
 // Assignment code here
-let lowercase = ["q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m"]
-let uppercase = ["Q","W","E","R","T","Y","U","I","O","P","A","S","D","F","G","H","J","K","L","Z","X","C","V","B","N","M"]
-let numbers = ["1","2","3","4","5","6","7","8","9","0"]
-let special = ["!","@","#","$","%","*","-","_","~"]
+const lowercase = ["q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m"]
+const uppercase = ["Q","W","E","R","T","Y","U","I","O","P","A","S","D","F","G","H","J","K","L","Z","X","C","V","B","N","M"]
+const numbers = ["1","2","3","4","5","6","7","8","9","0"]
+const special = ["!","@","#","$","%","*","-","_","~"]
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 //assembling password properties
 function generatePassword() {
   //confirm length
-  let numChars = Number(window.prompt("how manycharacters do you want your password to be 8-128")); 
+  const numChars = Number(window.prompt("how many characters do you want your password to be 8-128")); 
   while(true){
     if(numChars < 8 || numChars > 128){
-      numChars = Number(window.prompt("Invalid Option, try again. How manycharacters do you want your password to be 8-128")); 
+      numChars = Number(window.prompt("Invalid Option, try again. How many characters do you want your password to be 8-128")); 
       continue;
     }else{
     window.alert("password will be "+ numChars + " characters long");
@@ -57,8 +57,8 @@ function generatePassword() {
         let idx = Math.floor(Math.random()*passchar.length);
         let pwdChar = passchar[idx];
         password.push(pwdChar);
-        return password.join('');
       }
+      return password.join('');
     //if password list is empty
     }else{
       window.alert("You Must Chose an Option")
