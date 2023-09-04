@@ -8,8 +8,9 @@ var generateBtn = document.querySelector("#generate");
 //assembling password properties
 function generatePassword() {
   //confirm length
-  let numChars = Number(window.prompt("how manycharacters do you want your password to be 8-128")); 
+  
   while(true){
+    let numChars = Number(window.prompt("how manycharacters do you want your password to be 8-128")); 
     if(numChars < 8 || numChars > 128){
       numChars = Number(window.prompt("Invalid Option, try again. How manycharacters do you want your password to be 8-128")); 
       continue;
@@ -59,13 +60,14 @@ function generatePassword() {
         password.push(pwdChar);
         return password.join('');
       }
-      // if password list is empty
-      }else{
-        window.alert("You Must Chose an Option")
-        continue
-      }
+    //if password list is empty
+    }else{
+      window.alert("You Must Chose an Option")
+      continue
+    }
   }
 }
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
